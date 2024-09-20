@@ -1,0 +1,107 @@
+.pag-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination-main{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding-left: 20PX;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+.page-num-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ .page-num-container p {
+  height: 40px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.page-num-container p:hover{
+  background: #605BFF;
+  color: white;
+}
+
+.previous-btn{
+  color: #757575;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.previous-btn:hover{
+color: #605BFF;
+}
+
+.previous-arrow {
+  display: inline-block;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+
+.next-btn{
+  color: #757575;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.next-btn:hover{
+color: #605BFF;
+}
+
+.next-arrow {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.dotted-icon-pagination{
+  font-size: 22px !important;
+}
+
+.dotted-icon-pagination:hover{
+  background-color: transparent !important;
+  color: black !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .pagination-main{
+    gap: 5px;
+    background-color: white;
+    padding-left: 7PX;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .page-num-container p {
+    height: 30px;
+    font-size: 13px;
+    width: 30px;
+  }
+
+  .page-num-container{
+    gap: 5px;
+  }
+}

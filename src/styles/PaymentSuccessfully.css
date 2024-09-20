@@ -1,0 +1,51 @@
+.Payment{
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  align-items: center;
+}
+
+.Payment-container{
+  width: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PaymentLogo{
+  font-size: 40px;
+  font-weight: 800;
+  color: #605bff;
+  padding-left: 20px;
+}
+
+.Payment-img-container{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #26a212;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.Payment-img{
+  width: 55px;
+}
+
+.Payment-text{
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Payment-button{
+  width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  background-color: #605bff;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}

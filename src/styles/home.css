@@ -76,6 +76,8 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 table th {

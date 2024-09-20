@@ -1,0 +1,83 @@
+
+/* scan list table  */
+
+.table-container {
+  max-height: 90vh;
+  overflow: auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table th {
+  font-weight: 400;
+  white-space: nowrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  /* position: sticky;
+  top: 0;
+  z-index: 10; */
+}
+
+td {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.table-row {
+  background-color: white;
+  height: 70px;
+  border: 2px solid #0000000d;
+  clip-path: inset(0 round 10px);
+}
+
+.action-dots {
+  font-size: 20px;
+}
+
+.table-container {
+  max-height: 90vh;
+  overflow: auto;
+  border: 2px solid #0000000d;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #030229;
+  width: 3px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+/* ------------------------ */
+
+.scan-list-reward-level {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  color: white;
+}

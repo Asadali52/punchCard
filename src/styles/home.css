@@ -1,0 +1,148 @@
+.home-cards-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.home-top-cards-container{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+  width: 100%;
+  height: 110px;
+  border-radius: 10px;
+  border: 2px solid #0000000d;
+}
+
+.card-icons-div {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #f0efff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-numbers {
+  color: #030229;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cards-title {
+  color: #030229;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-cards-main{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home-cards-main{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home-cards-main{
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .home-cards-main{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* home table  */
+
+.table-container {
+  max-height: 80vh;
+  overflow: auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+table th {
+  font-weight: 400;
+  white-space: nowrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  /* position: sticky;
+  top: 0;
+  z-index: 10; */
+}
+
+td {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.table-row {
+  background-color: white;
+  height: 70px;
+  border: 2px solid #0000000d;
+  clip-path: inset(0 round 10px);
+}
+
+.table-active-status {
+  background-color: #f3faf7;
+  color: green;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.table-inactive-status{
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #fdf2f2;
+  color: #F98080;
+}
+
+.action-dots {
+  font-size: 20px;
+}
+
+.table-container {
+  max-height: 80vh;
+  overflow: auto;
+  border: 2px solid #0000000d;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #030229;
+  width: 3px;
+  height: 3px;
+  border-radius: 10px;
+}

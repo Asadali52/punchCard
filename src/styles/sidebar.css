@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  position: relative;
+
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 230px;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 1px black;
+  z-index: 100;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.main-heading {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+
+.toggle-headin-div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input-div-large {
+  border: 2px solid #0000000D;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  overflow: hidden;
+  background: white;
+}
+
+.search-input-div-small {
+  display: none;
+  background: white;
+  margin-top: 10px;
+}
+
+.search-input {
+  width: 200px;
+  height: 32px;
+  border: none;
+  color: gray;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: 0;
+}
+
+.add-new-btn {
+  color: white;
+  padding: 10px;
+  width: 95px;
+  background: #605BFF;
+  border-radius: 10px;
+  border: none;
+  font: 15px;
+}
+
+#toggle-btn {
+  color: black;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.app-logo-div {
+  padding-left: 10px;
+}
+
+.app-logo {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.sidebar-options-main {
+  width: 180px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 120;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  color: #030229;
+  border-radius: 10px;
+}
+
+.sidebar-option:hover {
+  background-color: #605BFF;
+  color: white;
+}
+
+.sidebar-option:hover .heading {
+  opacity: 1;
+}
+
+.heading {
+  margin-left: 10px;
+  opacity: 0.6;
+}
+
+.main-body {
+  padding-left: 230px;
+  padding-right: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+  }
+
+  #toggle-btn {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .sidebar.sidebar-expanded {
+    left: 0;
+  }
+
+  .main-body {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .navbar {
+    padding-left: 5px;
+  }
+
+  .main-heading {
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .search-input {
+    width: 120px;
+    height: 32px;
+    padding-left: 5px;
+    font-size: 12px;
+  }
+
+  .add-new-btn {
+    color: white;
+    padding: 6px;
+    width: 80 px;
+    border-radius: 8px;
+    border: none;
+    font: 11px;
+  }
+
+  .nav-right {
+    gap: 5px;
+  }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+
+.sidebar-expanded+#overlay {
+  display: block;
+}
+
+@media only screen and (max-width: 450px) {
+  .search-input-div-large {
+    display: none;
+  }
+
+  .search-input-div-small {
+    border: 2px solid #0000000D;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    overflow: hidden;
+  }
+}

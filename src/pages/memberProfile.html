@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/src/styles/sidebar.css">
   <link rel="stylesheet" href="/src//styles/dropDown.css">
   <link rel="stylesheet" href="/src/styles/memberProfile.css">
+  <link rel="stylesheet" href="/src/modalaStyles/addStampModal.css">
 </head>
 
 <body>
@@ -121,7 +122,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetu.</p>
               </span>
             </div>
-            <button class="action-btn">Stamp me</button>
+            <!-- <button class="action-btn">Stamp me</button> -->
+            <button class="action-btn" id="stampBtn">Stamp me</button>
           </div>
           <div class="action-div-child">
             <div class="img-and-detail-div">
@@ -272,102 +274,213 @@
 
     <div class="table-big-container">
 
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th><img src="/src//assets//table-serial-icon.svg" /></th>
-            <th>$ In</th>
-            <th>$ Out</th>
-            <th>Last Scan</th>
-            <th>Stamp</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-          <tr class="table-row">
-            <td>1</td>
-            <td>$454</td>
-            <td>$ 154</td>
-            <td style="width: 250px">24-12-2024 12:05:39 PM</td>
-            <td>546</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th><img src="/src//assets//table-serial-icon.svg" /></th>
+              <th>$ In</th>
+              <th>$ Out</th>
+              <th>Last Scan</th>
+              <th>Stamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+            <tr class="table-row">
+              <td>1</td>
+              <td>$454</td>
+              <td>$ 154</td>
+              <td style="width: 250px">24-12-2024 12:05:39 PM</td>
+              <td>546</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="latest-activity-main-card">
-      <span class="activity-icon-main">
-        <div class="activity-icon-div">
-          <img src="/src/assets/activity-icon.svg" >
+      <div class="latest-activity-main-card">
+        <span class="activity-icon-main">
+          <div class="activity-icon-div">
+            <img src="/src/assets/activity-icon.svg">
+          </div>
+          <h4 style="font-size: 17px;">Latest Activity</h4>
+        </span>
+        <div class="activity-card-deatails">
+          <h3>Last Scan</h3>
+          <p>24 July 2024 12:05:39 PM</p>
         </div>
-        <h4 style="font-size: 17px;">Latest Activity</h4>
-      </span>
-      <div class="activity-card-deatails">
-        <h3>Last Scan</h3>
-        <p>24 July 2024  12:05:39 PM</p>
+        <div class="activity-card-deatails">
+          <h3>Last Redeem</h3>
+          <p>24 July 2024 </p>
+        </div>
+        <div class="activity-card-deatails">
+          <h3>Last Send Reward</h3>
+          <p>24 July 2024</p>
+        </div>
+        <div class="activity-card-deatails" style="flex-direction: column;">
+          <h3>Last Redeem Location</h3>
+          <p>Lorem ipsum dolor sit amet, consectLorem amet, consect</p>
+        </div>
       </div>
-      <div class="activity-card-deatails">
-        <h3>Last Redeem</h3>
-        <p>24 July 2024 </p>
-      </div>
-      <div class="activity-card-deatails">
-        <h3>Last Send Reward</h3>
-        <p>24 July 2024</p>
-      </div>
-      <div class="activity-card-deatails" style="flex-direction: column;">
-        <h3>Last Redeem Location</h3>
-        <p>Lorem ipsum dolor sit amet, consectLorem amet, consect</p>
-      </div>
+
     </div>
 
   </div>
 
+  <div class="add-stamp-modal" id="addStampModal" style="display: none;">
+    <div class="add-stamp-modal-content">
+      <div class="add-stamp-modal-header">
+      <span class="add-stamp-close-btn">
+        <img src="/src/assets/Cross.svg" height="20px" width="20px">
+      </span>
+      <h2>Add Stamp</h2>
+      </div>
+      <div class="add-stamp-modal-input-div">
+        <input type="text" placeholder="Text" class="add-stamp-modal-input">
+        <p>Add Stamp</p>
+      </div>
 
+      <div class="add-stamp-modal-card-container">
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-stamp-modal-card">
+          <div class="add-stamp-img-container">
+          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+          <p class="add-stamp-modal-text">
+            <span>Caramel Frappucino Large</span>
+            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+          </p>
+          </div>
+          <p class="add-stamp-modal-required">Required 4 stamp</p>
+        </div>
+
+
+      </div>
+
+    </div>
   </div>
+  
+
   <script src="/src/js/script.js"></script>
   <script src="/src/js/tabs.js"></script>
+  <script src="/src/js/addStampModal.js"></script>
 </body>
 
 </html>

@@ -261,6 +261,7 @@ body {
   color: #6875F5;
   font-size: 16px;
   height: 45px;
+  cursor: pointer;
   width: 140px;
   background-color: #fff;
   border-radius: 10px;

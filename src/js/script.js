@@ -10,24 +10,3 @@ function toggleSidebar() {
 toggleBtn.addEventListener('click', toggleSidebar);
 
 overlay.addEventListener('click', toggleSidebar);
-
-// global modal 
-
-let modal = document.getElementById("bussinessModal");
-let openBtn = document.getElementById("openModal");
-let closeBtn = document.getElementsByClassName("close")[0];
-
-openBtn.onclick = function() {
-  modal.style.display = "flex";
-}
-
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}

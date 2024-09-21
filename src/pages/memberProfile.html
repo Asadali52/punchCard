@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Mnanagement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/src/styles/sidebar.css">
+  <link rel="stylesheet" href="/src//styles/dropDown.css">
+  <!-- <link rel="stylesheet" href="/src/styles/home.css"> -->
+  <link rel="stylesheet" href="/src/styles/memberProfile.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span class="toggle-headin-div">
+      <button id="toggle-btn">☰</button>
+      <p class="main-heading">Members name</p>
+    </span>
+
+  </div>
+
+  <div id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-options-main">
+      <div class=" app-logo-div">
+        <img src="/src/assets/Customer-Management-logo.svg" alt="Logo" class="app-logo" />
+      </div>
+      <div class="sidebar-option">
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.4">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.54 0H5.92C7.33 0 8.46 1.15 8.46 2.561V5.97C8.46 7.39 7.33 8.53 5.92 8.53H2.54C1.14 8.53 0 7.39 0 5.97V2.561C0 1.15 1.14 0 2.54 0ZM2.54 11.4697H5.92C7.33 11.4697 8.46 12.6107 8.46 14.0307V17.4397C8.46 18.8497 7.33 19.9997 5.92 19.9997H2.54C1.14 19.9997 0 18.8497 0 17.4397V14.0307C0 12.6107 1.14 11.4697 2.54 11.4697ZM17.4591 0H14.0791C12.6691 0 11.5391 1.15 11.5391 2.561V5.97C11.5391 7.39 12.6691 8.53 14.0791 8.53H17.4591C18.8591 8.53 19.9991 7.39 19.9991 5.97V2.561C19.9991 1.15 18.8591 0 17.4591 0ZM14.0791 11.4697H17.4591C18.8591 11.4697 19.9991 12.6107 19.9991 14.0307V17.4397C19.9991 18.8497 18.8591 19.9997 17.4591 19.9997H14.0791C12.6691 19.9997 11.5391 18.8497 11.5391 17.4397V14.0307C11.5391 12.6107 12.6691 11.4697 14.0791 11.4697Z"
+                fill="#030229" />
+            </g>
+          </svg>
+
+        </span>
+        <span class="heading">Dashboard</span>
+      </div>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-users"></i>
+        <span class="heading">Members</span>
+      </div>
+
+      <div class="sidebar-option">
+        <span class="icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+              <path class="ggggg"
+                d="M15 3H21V8H19V5H15V3ZM9 3V5H5V8H3V3H9ZM15 21V19H19V16H21V21H15ZM9 21H3V16H5V19H9V21ZM3 11H21V13H3V11Z" />
+            </g>
+          </svg>
+        </span>
+        <span class="heading">Scene</span>
+      </div>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-gear"></i>
+        <span class="heading">Setting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- start home page  -->
+
+  <div class="main-body">
+
+    <div class="cards-and-tabs-container">
+
+      <div class="home-cards-main">
+        <div class="home-top-cards-container">
+          <div class="card-icons-div" style="background-color: #fffdf0;">
+            <img src="/src/assets/total-scan-svg.svg" height="22px" width="22px" />
+          </div>
+          <div>
+            <p class="cards-numbers">23+</p>
+            <span class="cards-title">Scans</span>
+          </div>
+        </div>
+        <div class="home-top-cards-container">
+          <div class="card-icons-div" style="background-color: #fff4f1;">
+            <img src="/src/assets/total-reward-svg.svg" height="25px" width="25px" />
+          </div>
+          <div>
+            <p class="cards-numbers">4567898</p>
+            <span class="cards-title">Total Reward</span>
+          </div>
+        </div>
+        <div class="home-top-cards-container">
+          <div class="card-icons-div">
+            <img src="/src/assets/dollor-icon-svg.svg" height="25px" width="25px" />
+          </div>
+          <div>
+            <p class="cards-numbers">$ 1200</p>
+            <span class="cards-title">$ In</span>
+          </div>
+        </div>
+        <div class="home-top-cards-container">
+          <div class="card-icons-div">
+            <img src="/src/assets/dollor-icon-svg.svg" height="22px" width="22px" />
+          </div>
+          <div>
+            <p class="cards-numbers">$ 1200</p>
+            <span class="cards-title">$ Out</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- tabs  -->
+
+      <div class="tabs-container">
+
+        <div class="dropdown-and-avatar-div">
+          <div class="member-profile-div">
+            <div class="profile-icon-div">
+              <img src="/src/assets/user-profile-icon.svg" height="30px" width="30px">
+            </div>
+            <span class="user-profile-data">
+              <p class="user-name">“Member Name”</p>
+              <p class="user-profile-status">Active</p>
+            </span>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item edit">
+                <i class="fas fa-edit"></i> Edit
+              </a>
+              <a href="#" class="dropdown-item delete">
+                <i class="fas fa-trash-alt"></i> Delete
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-link active" id="tab1-btn">Card Details</button>
+          <button class="tab-link" id="tab2-btn">User Details</button>
+        </div>
+
+        <div class="tab-content" id="tab1-content">
+
+          <div class="switch-button-div">
+            <p>Card Status</p>
+            <div class="switch-container">
+              <input type="checkbox" id="switch" class="switch-input">
+              <label for="switch" class="switch-label"></label>
+            </div>
+          </div>
+
+          <span class="span-container">
+            <span style="color: #616974;" >#NFC</span>
+            <span>04AABBCC112233</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Card Tier</span>
+            <span class="royal-btn">Royal</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Issue Date</span>
+            <span>2024-07-20</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Expiry Date</span>
+            <span>2024-07-20</span>
+          </span>
+          
+        </div>
+
+        <div class="tab-content" id="tab2-content" style="display: none;">
+          <span class="span-container">
+            <span style="color: #616974;" >Email</span>
+            <span>abc1234@gmail.com</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Phone No</span>
+            <span>+1 (345) 1454152645</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Date of Birth</span>
+            <span>2024-07-20</span>
+          </span>
+          
+          <span class="span-container">
+            <span style="color: #616974;" >Address</span>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, minus.</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th><img src="/src//assets//table-serial-icon.svg" /></th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Total Scans</th>
+          <th>Total Points</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-active-status">Active</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-active-status">Active</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-inactive-status">Inactive</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-inactive-status">Inactive</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-active-status">Active</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-inactive-status">Inactive</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-inactive-status">Inactive</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-active-status">Active</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+        <tr class="table-row">
+          <td>1</td>
+          <td>Darrel Steward</td>
+          <td>
+            <img src="/src/assets/table-Message-svg.svg" />
+            <span>arroragaur@gmail.com</span>
+          </td>
+          <td>+1 (3435) 45794</td>
+          <td>546</td>
+          <td>487989</td>
+          <td>
+            <span class="table-active-status">Active</span>
+          </td>
+          <td class="action-dots">...</td>
+        </tr>
+      </tbody>
+    </table>
+</div> -->
+
+
+  </div>
+  <script src="/src/js/script.js"></script>
+  <script src="/src/js/tabs.js"></script>
+</body>
+
+</html>

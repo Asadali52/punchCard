@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Mnanagement</title>
+  <title>Member Profile</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="/src/styles/sidebar.css">
   <link rel="stylesheet" href="/src//styles/dropDown.css">
@@ -122,7 +122,6 @@
                 <p>Lorem ipsum dolor sit amet, consectetu.</p>
               </span>
             </div>
-            <!-- <button class="action-btn">Stamp me</button> -->
             <button class="action-btn stampBtn">Stamp me</button>
           </div>
           <div class="action-div-child">
@@ -133,7 +132,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetu.</p>
               </span>
             </div>
-            <button class="action-btn">Redeem Reward</button>
+            <button class="action-btn redeemBtn">Redeem Reward</button>
           </div>
           <div class="action-div-child">
             <div class="img-and-detail-div">
@@ -258,7 +257,7 @@
             <p>Lorem ipsum dolor sit amet, consectetu.</p>
           </span>
         </div>
-        <button class="action-btn">Redeem Reward</button>
+        <button class="action-btn redeemBtn">Redeem Reward</button>
       </div>
       <div class="action-div-child">
         <div class="img-and-detail-div">
@@ -368,13 +367,15 @@
 
   </div>
 
+  <!-- stamp modal content  -->
+
   <div class="add-stamp-modal" id="addStampModal" style="display: none;">
     <div class="add-stamp-modal-content">
       <div class="add-stamp-modal-header">
-      <span class="add-stamp-close-btn">
-        <img src="/src/assets/Cross.svg" height="20px" width="20px">
-      </span>
-      <h2>Add Stamp</h2>
+        <span class="add-stamp-close-btn">
+          <img src="/src/assets/Cross.svg" height="20px" width="20px">
+        </span>
+        <h2>Add Stamp</h2>
       </div>
       <div class="add-stamp-modal-input-div">
         <input type="text" placeholder="Text" class="add-stamp-modal-input">
@@ -385,88 +386,88 @@
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-required">Required 4 stamp</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-redeem-btn">Redeem</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-redeem-btn">Redeem</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-redeem-btn">Redeem</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-required">Required 4 stamp</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-redeem-btn">Redeem</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-required">Required 4 stamp</p>
         </div>
 
         <div class="add-stamp-modal-card">
           <div class="add-stamp-img-container">
-          <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
-          <p class="add-stamp-modal-text">
-            <span>Caramel Frappucino Large</span>
-            <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
-          </p>
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-stamp-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-stamp-modal-des">Ends on 31 Dec 2022</span>
+            </p>
           </div>
           <p class="add-stamp-modal-required">Required 4 stamp</p>
         </div>
@@ -476,7 +477,134 @@
 
     </div>
   </div>
+
+  <!-- redeem modal content  -->
+
+  <div class="add-redeem-modal" id="addRedeemModal" style="display: none;">
+    <div class="add-redeem-modal-content">
+      <div class="add-reddem-modal-header">
+        <span class="add-redeem-close-btn">
+          <img src="/src/assets/Cross.svg" height="20px" width="20px">
+        </span>
+        <h2>Redeem Reward</h2>
+      </div>
+
+      <div class="add-redeem-modal-card-container">
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-redeem-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-redeem-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-redeem-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-redeem-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-1.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-redeem-modal-required">Required 4 stamp</p>
+        </div>
+
+        <div class="add-redeem-modal-card">
+          <div class="add-redeem-img-container">
+            <img src="/src/assets/add-stamp-mod-img-2.png" height="40px" width="40px">
+            <p class="add-redeem-modal-text">
+              <span>Caramel Frappucino Large</span>
+              <span class="add-redeem-modal-des">Ends on 31 Dec 2022</span>
+            </p>
+          </div>
+          <p class="add-stamp-modal-redeem-btn">Redeem</p>
+        </div>
+
   
+    </div>
+  </div>
+
 
   <script src="/src/js/script.js"></script>
   <script src="/src/js/tabs.js"></script>

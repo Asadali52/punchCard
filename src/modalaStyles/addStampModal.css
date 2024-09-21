@@ -181,3 +181,152 @@
     flex-direction: column;
   }
 }
+
+/* redeem reward style  */
+
+.add-redeem-modal {
+  display: none;
+  position: fixed;
+  z-index: 1020;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-redeem-modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 50%;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.add-redeem-modal-content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.add-redeem-modal-content::-webkit-scrollbar-thumb {
+  background-color: #605BFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.add-redeem-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-redeem-close-btn {
+  position: absolute;
+  border: 2px solid lightgray;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  right: 20px;
+}
+
+.add-redeem-modal-card-container {
+  margin-top: 10px;
+  background: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.add-redeem-modal-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-redeem-img-container {
+  display: flex;
+  gap: 10px;
+}
+
+.add-redeem-modal-text {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.add-redeem-modal-des {
+  color: #959595;
+  font-size: 12px;
+}
+
+.add-redeem-modal-required {
+  color: #959595;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: end;
+}
+
+.add-stamp-modal-redeem-btn {
+  background-color: #605BFF;
+  color: white;
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 1250px) {
+  .add-redeem-modal-content {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .add-redeem-modal-content {
+    width: 70%;
+  }
+
+  .add-redeem-modal-card {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .add-redeem-modal-content {
+    width: 95%;
+  }
+
+  .add-redeem-modal-card {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .add-redeem-modal-card-container {
+    grid-template-columns: 1fr;
+  }
+}

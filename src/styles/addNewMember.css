@@ -1,0 +1,247 @@
+.form-main-container {
+  width: 60%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 30px;
+  border: 1px solid lightgray;
+  margin: 2% auto;
+}
+
+.add-new-member-avatar {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.plus-icon-bg {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+}
+
+.add-new-member-input p{
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.add-new-member-input input {
+  height: 40px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  background-color: #FAFAFB;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-new-member-input select {
+  margin-top: 30px;
+  height: 40px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  background-color: #FAFAFB;
+  padding-left: 10px;
+  padding-right: 40px !important;
+}
+
+.add-new-member-input input:focus, .add-new-member-input select:focus {
+outline: 0;
+}
+
+.add-new-mem-two-input-div {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.add-new-member-buttons {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.add-new-member-buttons .cancel-btn {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-new-member-buttons .add-member-btn {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #605BFF;
+  border: 2px solid #605BFF;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-main-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .add-new-mem-two-input-div{
+    grid-template-columns: 1fr;
+  }
+  .form-main-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* OTP modal style  */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  z-index: 1020;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 320px; 
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.otp-modal-container {
+  margin-top: 10px;
+}
+
+.otp-modal-container p {
+  margin-top: 15px;
+  color: #838BA1;
+  font-size: 15px;
+}
+
+.otp-modal-inputs-cont {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.otp-modal-inputs-cont input {
+  height: 45px;
+  width: 45px;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  background-color: #F7F8F9;
+  font-size: 25px;
+  text-align: center;
+}
+
+.otp-modal-inputs-cont input:focus {
+  outline: 0;
+}
+
+.otp-modal-verify-btn {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: #605BFF;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.otp-modal-instruction {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.resend-text {
+  color: #605BFF;
+  font-weight: 600;
+}
+
+/* success modal style  */
+
+.success-otp-img-div{
+  display: flex;
+  justify-content: center;
+}
+
+.otp-verified-text {
+  font-size: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.otp-success-des {
+  font-size: 15px;
+  color: #8391A1;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.go-to-profile-btn{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: #605BFF;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}

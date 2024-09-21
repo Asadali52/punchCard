@@ -1,5 +1,7 @@
-document.getElementById('stampBtn').addEventListener('click', function() {
-  document.getElementById('addStampModal').style.display = 'block';
+document.querySelectorAll('.stampBtn').forEach(button => {
+  button.addEventListener('click', function() {
+    document.getElementById('addStampModal').style.display = 'block';
+  });
 });
 
 document.querySelector('.add-stamp-close-btn').addEventListener('click', function() {

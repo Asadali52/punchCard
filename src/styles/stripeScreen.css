@@ -1,0 +1,223 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+p{
+  margin: 0;
+}
+
+select , input{
+  box-shadow: 1px 1px 5px lightgray;
+}
+
+.logo-text {
+  color: #605BFF;
+  font-size: 40px;
+  font-weight: 900;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-data-container {
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.card-icon-div {
+  height: 60px;
+  border: 2px solid #605BFF;
+  box-shadow: 0 0 2px #605BFF;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card-number-label {
+  font-size: 15px;
+  color: #4F5B76;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.card-number-div {
+  position: relative;
+}
+
+.card-number-div input{
+  width: 100%;
+  height: 45px;
+  border: 2px solid #E0E0E0;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 50px;
+  box-sizing: border-box; 
+  font-size: 16px;
+}
+
+.card-number-div img{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+input:focus, select:focus{
+  outline: 0 !important;
+}
+
+.add-new-mem-two-input-div {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.add-new-member-input p{
+  font-size: 15px;
+  color: #4F5B76;
+  margin: 5px 0;
+}
+
+.add-new-member-input input {
+  height: 45px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  background-color: #FAFAFB;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.add-new-member-input select {
+  height: 45px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  background-color: #FAFAFB;
+  padding-left: 10px;
+  padding-right: 40px !important;
+}
+
+.pay-now-btn {
+  color: white;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: #605BFF;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+
+  .screen-data-container {
+    margin-top: 20px;
+  }
+
+  .add-new-mem-two-input-div {
+    grid-template-columns: 1fr;
+  }
+
+  .card-number-label {
+    margin-top: 30px;
+  }
+
+  .card-number-div img{
+    top: 50px;
+    left: 0px;
+  }
+
+  .responsive-margin {
+    margin-top: 50px;
+  }
+}
+
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #888;
+  width: 270px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.delete-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.Payment-container{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Payment-img-container{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #26a212;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.Payment-img{
+  width: 45px;
+}
+
+.Payment-text{
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Payment-button{
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  background-color: #605bff;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+}

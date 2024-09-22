@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Mnanagement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/src/styles/sidebar.css">
+  <link rel="stylesheet" href="/src/styles/purchaseMoreCardAndSms.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span class="toggle-headin-div">
+      <button id="toggle-btn">☰</button>
+      <p class="main-heading">Purchase</p>
+    </span>
+  </div>
+
+  <div id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-options-main">
+      <div class=" app-logo-div">
+        <img src="/src/assets/Customer-Management-logo.svg" alt="Logo" class="app-logo" />
+      </div>
+      <a href="/src/pages/memberProfile.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="heading">Dashboard</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/customerList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-users"></i>
+          <span class="heading">Members</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/scanList.html">
+        <div class="sidebar-option">
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g class="icon-fill">
+                <path
+                  d="M15 3H21V8H19V5H15V3ZM9 3V5H5V8H3V3H9ZM15 21V19H19V16H21V21H15ZM9 21H3V16H5V19H9V21ZM3 11H21V13H3V11Z" />
+              </g>
+            </svg>
+          </span>
+          <span class="heading">Scan</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseMoreCardAndSms.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="heading">Purchase</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseCreateCard.html">
+        <div class="sidebar-option">
+          <i class="fa-regular fa-credit-card"></i>
+          <span class="heading">Cards</span>
+        </div>
+      </a>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-gear"></i>
+        <span class="heading">Setting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- start scan list page  -->
+
+  <div class="main-body">
+    <p class="screen-heading">Purchase Card & SMS</p>
+    <div class="screen-main-container">
+      <div class="cards-main-cantiner">
+
+        <div class="card-content-container">
+          <span class="card-top-part">
+            <p style="font-size: 14px;">SMS</p>
+            <p class="most-popular-text-with-bg">Most Popular</p>
+          </span>
+          <p class="dollor-big-heading">$0.2 <span
+              style="font-size: 16px; color: #2F2B4399; font-weight: 400;">/SMS</span></p>
+          <p class="card-desc">Stunning pack of trendy 3D objects</p>
+          <div class="desc-big-container">
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Design system</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Components</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Lifetime updates</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Commercial license</p>
+            </span>
+          </div>
+          <a href="/src/pages/purchaseStripeScreen.html">
+            <p class="sms-card-buy-now-btn">Buy Now</p>
+          </a>
+        </div>
+
+        <div class="card-content-container" style="background-color: #edecff;">
+          <span class="card-top-part">
+            <p style="font-size: 14px;">SMS</p>
+            <p class="most-popular-text-with-bg" style="background-color: white; color: black;">Most Popular</p>
+          </span>
+          <p class="dollor-big-heading">$0.2 <span
+              style="font-size: 16px; color: #2F2B4399; font-weight: 400;">/SMS</span></p>
+          <p class="card-desc">Stunning pack of trendy 3D objects</p>
+          <div class="desc-big-container">
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Design system</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Components</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Lifetime updates</p>
+            </span>
+            <span class="tick-mini-box">
+              <img src="/src/assets/card-tick-icon.svg">
+              <p class="font-size: 15px; color: #2F2B43;">Commercial license</p>
+            </span>
+          </div>
+          <a href="/src/pages/purchaseStripeScreen.html">
+            <p class="card-card-buy-now-btn">Buy Now</p>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

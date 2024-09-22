@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Mnanagement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/src/styles/sidebar.css">
+  <link rel="stylesheet" href="/src/styles/purchaseCreateCard.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span class="toggle-headin-div">
+      <button id="toggle-btn">☰</button>
+      <p class="main-heading">Create New Cards</p>
+    </span>
+  </div>
+
+  <div id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-options-main">
+      <div class=" app-logo-div">
+        <img src="/src/assets/Customer-Management-logo.svg" alt="Logo" class="app-logo" />
+      </div>
+      <a href="/src/pages/memberProfile.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="heading">Dashboard</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/customerList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-users"></i>
+          <span class="heading">Members</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/scanList.html">
+        <div class="sidebar-option">
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g class="icon-fill">
+                <path
+                  d="M15 3H21V8H19V5H15V3ZM9 3V5H5V8H3V3H9ZM15 21V19H19V16H21V21H15ZM9 21H3V16H5V19H9V21ZM3 11H21V13H3V11Z" />
+              </g>
+            </svg>
+          </span>
+          <span class="heading">Scan</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseMoreCardAndSms.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="heading">Purchase</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseCreateCard.html">
+        <div class="sidebar-option">
+          <i class="fa-regular fa-credit-card"></i>
+          <span class="heading">Cards</span>
+        </div>
+      </a>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-gear"></i>
+        <span class="heading">Setting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- start purchase create card page  -->
+
+  <div class="main-body">
+    <div class="Create-Card-Container">
+      <div class="Card-Container">
+        <h2 class="Create-Card-heading">Create Your First Card</h2>
+        <p class="Create-Card-text">Card layout</p>
+        <div class="Create-Card-div-container">
+          <label class="Create-Card-radio-Container">
+            <input type="radio" name="layout" class="Create-Card-radio">
+            <p class="Create-Card-radio-text">Vertical</p>
+          </label>
+          <label class="Create-Card-radio-Container">
+            <input type="radio" name="layout" class="Create-Card-radio">
+            <p class="Create-Card-radio-text">Horizontal</p>
+          </label>
+        </div>
+        <h3>Front Side</h3>
+        <p class="Create-Card-para">Upload Logo or business image</p>
+        <div class="Create-Card-img-container">
+          <img src="/src/assets/image-gallery.svg" alt="image-gallery" class="Create-Card-img-gallery">
+          <div class="Create-Card-img-upload-container">
+            <img src="/src/assets/upload-line.svg" alt="upload-line" class="Create-Card-img-upload">
+            <p class="Create-Card-img-text">Drop Logo or Image Here Or <span class="Create-Card-span-text">Browse</span>
+            </p>
+          </div>
+        </div>
+        <p class="Create-Card-p">Back Side</p>
+        <div class="Create-Card-checkbox-div-Container">
+          <label class="Create-Card-checkbox-Container">
+            <input type="checkbox" class="Create-Card-checkbox">
+            <p class="Create-Card-checkbox-text">Add Address</p>
+          </label>
+          <label class="Create-Card-checkbox-Container">
+            <input type="checkbox" class="Create-Card-checkbox">
+            <p class="Create-Card-checkbox-text">State</p>
+          </label>
+          <label class="Create-Card-checkbox-Container">
+            <input type="checkbox" class="Create-Card-checkbox">
+            <p class="Create-Card-checkbox-text">City</p>
+          </label>
+          <label class="Create-Card-checkbox-Container">
+            <input type="checkbox" class="Create-Card-checkbox">
+            <p class="Create-Card-checkbox-text">Zip Code</p>
+          </label>
+        </div>
+        <a href="/src/pages/customerList.html">
+          <button class="Create-Card-Button">Setup</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

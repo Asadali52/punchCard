@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Mnanagement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/src/styles/sidebar.css">
+  <link rel="stylesheet" href="/src/styles/purchaseStripeScreen.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span class="toggle-headin-div">
+      <button id="toggle-btn">☰</button>
+      <p class="main-heading">Members List</p>
+    </span>
+  </div>
+
+  <div id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-options-main">
+      <div class=" app-logo-div">
+        <img src="/src/assets/Customer-Management-logo.svg" alt="Logo" class="app-logo" />
+      </div>
+      <a href="/src/pages/memberProfile.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="heading">Dashboard</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/customerList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-users"></i>
+          <span class="heading">Members</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/scanList.html">
+        <div class="sidebar-option">
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g class="icon-fill">
+                <path
+                  d="M15 3H21V8H19V5H15V3ZM9 3V5H5V8H3V3H9ZM15 21V19H19V16H21V21H15ZM9 21H3V16H5V19H9V21ZM3 11H21V13H3V11Z" />
+              </g>
+            </svg>
+          </span>
+          <span class="heading">Scan</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseMoreCardAndSms.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="heading">Purchase</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseCreateCard.html">
+        <div class="sidebar-option">
+          <i class="fa-regular fa-credit-card"></i>
+          <span class="heading">Cards</span>
+        </div>
+      </a>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-gear"></i>
+        <span class="heading">Setting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- start scan list page  -->
+
+  <div class="main-body">
+    <a href="/src/pages/purchaseMoreCardAndSms.html" class="back-arrow-btn-link">
+      <i class="fa-solid fa-angle-left"></i>
+    </a>
+
+    <div class="screen-container">
+      <div class="screen-data-container">
+        <div class="card-icon-div">
+          <span>
+            <img src="/src/assets/card.svg" alt="">
+            <p style="font-size: 15px; color: #605BFF;">Card</p>
+          </span>
+        </div>
+        <p class="card-number-label">Card Number</p>
+        <div class="card-number-div">
+          <input type="text" placeholder="1234 1234 1234 1234">
+          <img src="/src/assets/cards-img-container.svg" alt="imges">
+        </div>
+
+        <div class="add-new-mem-two-input-div responsive-margin">
+          <div class="add-new-member-input">
+            <p>Expiry</p>
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="add-new-member-input">
+            <p>CVC</p>
+            <input type="date">
+          </div>
+        </div>
+
+        <div class="add-new-mem-two-input-div">
+          <div class="add-new-member-input">
+            <p>Country</p>
+            <select>
+              <option>United State</option>
+              <option>Pakistsn</option>
+              <option>India</option>
+              <option>Malaysia</option>
+            </select>
+          </div>
+          <div class="add-new-member-input">
+            <p>Postal Code</p>
+            <input type="text" placeholder="90210">
+          </div>
+        </div>
+        <p class="pay-now-btn">Pay Now</p>
+      </div>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="payment-modal" class="modal">
+      <div class="modal-content">
+        <img src="/src/assets/Cross.svg" height="20px" width="20px" class="delete-close-btn" id="close-modal-btn">
+        <div class="Payment-container">
+          <div class="Payment-img-container">
+            <img src="/src/assets/Regular-Icons.svg" alt="Regular-Icons" class="Payment-img">
+          </div>
+          <p class="Payment-text">Payment successfully <br> completed</p>
+          <a href="/src/pages/memberProfile.html">
+            <button class="Payment-button">Back to Dashboard</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/src/js/paymentSuccessfullModal.js"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

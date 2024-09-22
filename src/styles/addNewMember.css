@@ -34,7 +34,7 @@
 }
 
 .add-new-member-input input {
-  height: 40px;
+  height: 45px;
   border: 2px solid lightgray;
   border-radius: 10px;
   width: 100%;
@@ -46,7 +46,7 @@
 
 .add-new-member-input select {
   margin-top: 30px;
-  height: 40px;
+  height: 45px;
   border: 2px solid lightgray;
   border-radius: 10px;
   width: 100%;
@@ -75,8 +75,8 @@ outline: 0;
 }
 
 .add-new-member-buttons .cancel-btn {
-  width: 200px;
-  height: 40px;
+  width: 180px;
+  height: 45px;
   text-align: center;
   line-height: 40px;
   font-size: 14px;
@@ -86,8 +86,8 @@ outline: 0;
 }
 
 .add-new-member-buttons .add-member-btn {
-  width: 200px;
-  height: 40px;
+  width: 180px;
+  height: 45px;
   text-align: center;
   line-height: 40px;
   font-size: 14px;
@@ -173,14 +173,14 @@ body {
 
 .otp-modal-inputs-cont {
   display: flex;
-  gap: 30px;
   justify-content: center;
   margin-top: 15px;
+  gap: 20px;
 }
 
 .otp-modal-inputs-cont input {
-  height: 45px;
-  width: 45px;
+  height: 55px;
+  width: 55px;
   border: 1px solid lightgray;
   border-radius: 7px;
   background-color: #F7F8F9;

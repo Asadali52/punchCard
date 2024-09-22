@@ -1,7 +1,15 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+}
+
+@font-face {
+  font-family: my-font;
+  src: url(/src/Nunito-Regular.ttf);
+}
+
+body {
+  font-family: my-font !important;
 }
 
 .Create-Card-Container{

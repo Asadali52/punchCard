@@ -1,3 +1,12 @@
+@font-face {
+  font-family: my-font;
+  src: url(/src/Nunito-Regular.ttf);
+}
+
+body {
+  font-family: my-font !important;
+}
+
 .form-main-container {
   width: 60%;
   border-radius: 10px;
@@ -45,7 +54,6 @@
 }
 
 .add-new-member-input select {
-  margin-top: 30px;
   height: 45px;
   border: 2px solid lightgray;
   border-radius: 10px;
@@ -96,6 +104,14 @@ outline: 0;
   color: white;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.fa-location-dot{
+  position: absolute;
+  left: 13px;
+  font-size: 18px;
+  bottom: 12px;
+  color: #969697;
 }
 
 @media only screen and (max-width: 1200px) {

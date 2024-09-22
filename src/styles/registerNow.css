@@ -1,5 +1,10 @@
+@font-face {
+  font-family: my-font;
+  src: url(/src/Nunito-Regular.ttf);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: my-font !important;
 }
 
 p{
@@ -118,4 +123,12 @@ input {
   .checkbox-container {
     font-size: 12px;
   }
+}
+.fa-location-dot,
+.fa-envelope {
+  position: absolute;
+  left: 13px;
+  font-size: 18px;
+  bottom: 12px;
+  color: #969697;
 }

@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: my-font;
+  src: url(/src/Nunito-Regular.ttf);
+}
+
 body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   position: relative;
+  font-family: my-font !important;
 }
 
 .navbar {

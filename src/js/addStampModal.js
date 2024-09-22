@@ -35,3 +35,28 @@ window.addEventListener('click', function(event) {
   }
 });
 
+// ---------------------------
+// delete modal 
+
+document.getElementById('deleteModalBtn').addEventListener('click', function() {
+  document.getElementById('DeleteModal').style.display = 'block';
+});
+
+document.querySelector('.delete-close-btn').addEventListener('click', function() {
+  document.getElementById('DeleteModal').style.display = 'none';
+});
+
+document.querySelector('.delete-modal-cancel-btn').addEventListener('click', function() {
+  document.getElementById('DeleteModal').style.display = 'none'; // Hide modal
+});
+
+window.addEventListener('click', function(event) {
+  const deleteModal = document.getElementById('DeleteModal');
+  if (event.target === deleteModal) {
+    deleteModal.style.display = 'none';
+  }
+});
+
+
+
+

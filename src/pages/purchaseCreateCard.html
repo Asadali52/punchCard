@@ -48,6 +48,21 @@
         </div>
       </a>
 
+      <a href="/src/pages/businessNameList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-business-time"></i>
+          <span class="heading">Business</span>
+        </div>
+      </a>
+
+
+      <a href="/src/pages/addNewMember.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-plus"></i>
+          <span class="heading" style="font-size: 15px; white-space: nowrap;">Add New Members</span>
+        </div>
+      </a>
+
       <a href="/src/pages/scanList.html">
         <div class="sidebar-option">
           <span class="icon">
@@ -102,13 +117,15 @@
         </div>
         <h3>Front Side</h3>
         <p class="Create-Card-para">Upload Logo or business image</p>
-        <div class="Create-Card-img-container">
+        <div class="Create-Card-img-container" onclick="document.getElementById('fileInput').click();">
           <img src="/src/assets/image-gallery.svg" alt="image-gallery" class="Create-Card-img-gallery">
           <div class="Create-Card-img-upload-container">
             <img src="/src/assets/upload-line.svg" alt="upload-line" class="Create-Card-img-upload">
-            <p class="Create-Card-img-text">Drop Logo or Image Here Or <span class="Create-Card-span-text">Browse</span>
+            <p class="Create-Card-img-text">
+              Drop Logo or Image Here Or <span class="Create-Card-span-text">Browse</span>
             </p>
           </div>
+          <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="loadImage(event)">
         </div>
         <p class="Create-Card-p">Back Side</p>
         <div class="Create-Card-checkbox-div-Container">
@@ -136,6 +153,29 @@
     </div>
 
   </div>
+
+  <script>
+    function loadImage(event) {
+      const container = document.querySelector('.Create-Card-img-container');
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(event.target.files[0]);
+      img.alt = 'Uploaded Image';
+      img.classList.add('Create-Card-img-gallery');
+
+      const existingImage = container.querySelector('.Create-Card-img-gallery');
+      if (existingImage) {
+        existingImage.remove();
+      }
+      
+      container.insertBefore(img, container.childNodes[0]);
+
+      const uploadText = container.querySelector('.Create-Card-img-text');
+      uploadText.style.display = 'none';
+
+      const uploadContainer = container.querySelector('.Create-Card-img-upload-container');
+      uploadContainer.style.display = 'none';
+    }
+  </script>
 
 
   <script src="/src/js/script.js"></script>

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/src/styles/sidebar.css">
   <link rel="stylesheet" href="/src/styles/home.css">
   <link rel="stylesheet" href="/src/styles/pagination.css">
+  <link rel="stylesheet" href="/src/styles/addNewMemberModal.css">
   <style>
     body {
       font-family: 'Nunito', sans-serif;
@@ -23,16 +24,14 @@
   <div class="navbar">
     <span class="toggle-headin-div">
       <button id="toggle-btn">☰</button>
-      <p class="main-heading">Members List</p>
+      <p class="main-heading">Business Names</p>
     </span>
     <div class="nav-right">
       <div class="search-input-div-large">
         <img src="/src/assets/Search-icon.svg" height="18px" width="18px" />
         <input type="search" placeholder="Search" class="search-input">
       </div>
-      <a href="/src/pages/addNewMember.html">
-        <button class="add-new-btn">+ Add New</button>
-      </a>
+      <button id="add-new-btn" class="add-new-btn">+ Add New</button>
     </div>
   </div>
 
@@ -69,13 +68,13 @@
         </div>
       </a>
 
-
       <a href="/src/pages/addNewMember.html">
         <div class="sidebar-option">
           <i class="fa-solid fa-plus"></i>
           <span class="heading" style="font-size: 15px; white-space: nowrap;">Add New Members</span>
         </div>
       </a>
+
 
 
       <a href="/src/pages/scanList.html">
@@ -161,7 +160,7 @@
         <thead>
           <tr>
             <th><img src="/src//assets//table-serial-icon.svg" /></th>
-            <th>Name</th>
+            <th>Business Name</th>
             <th>Email</th>
             <th>Phone Number</th>
             <th>Total Scans</th>
@@ -334,6 +333,33 @@
     </div>
 
   </div>
+
+  <!-- add new member form modal  -->
+
+  <!-- Modal Structure -->
+  <div id="addNewModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close close-modal">&times;</span>
+      <h2>Add New Member</h2>
+      <div class="register-now-input-con">
+        <p>Name</p>
+        <input type="text" placeholder="Alex John">
+      </div>
+      <div class="register-now-input-con">
+        <p>Phone No.</p>
+        <input type="tel" placeholder="+1 (456) 4563789">
+      </div>
+      <div class="register-now-input-con">
+        <p>NFC #</p>
+        <input type="tel" placeholder="">
+      </div>
+      <div class="btns-div">
+        <p class="cancel-btn-modal close-modal">Cancel</p>
+        <p class="add-member-btn-modal">Add Member</p>
+      </div>
+    </div>
+  </div>
+  <script src="/src/js/addNewMemberModal.js"></script>
   <script src="/src/js/script.js"></script>
 </body>
 

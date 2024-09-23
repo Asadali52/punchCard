@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/createFirstCard.css">
   <title>Create First Card</title>
   <style>
@@ -33,13 +32,15 @@
       </div>
       <h3>Front Side</h3>
       <p class="Create-Card-para">Upload Logo or business image</p>
-      <div class="Create-Card-img-container">
+      <div class="Create-Card-img-container" onclick="document.getElementById('fileInput').click();">
         <img src="/src/assets/image-gallery.svg" alt="image-gallery" class="Create-Card-img-gallery">
         <div class="Create-Card-img-upload-container">
           <img src="/src/assets/upload-line.svg" alt="upload-line" class="Create-Card-img-upload">
-          <p class="Create-Card-img-text">Drop Logo or Image Here Or <span class="Create-Card-span-text">Browse</span>
+          <p class="Create-Card-img-text">
+            Drop Logo or Image Here Or <span class="Create-Card-span-text">Browse</span>
           </p>
         </div>
+        <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="loadImage(event)">
       </div>
       <p class="Create-Card-p">Back Side</p>
       <div class="Create-Card-checkbox-div-Container">
@@ -61,10 +62,33 @@
         </label>
       </div>
       <a href="/src/pages/customerList.html">
-      <button class="Create-Card-Button">Setup</button>
+        <button class="Create-Card-Button">Setup</button>
       </a>
     </div>
   </div>
+
+  <script>
+    function loadImage(event) {
+      const container = document.querySelector('.Create-Card-img-container');
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(event.target.files[0]);
+      img.alt = 'Uploaded Image';
+      img.classList.add('Create-Card-img-gallery');
+
+      const existingImage = container.querySelector('.Create-Card-img-gallery');
+      if (existingImage) {
+        existingImage.remove();
+      }
+      
+      container.insertBefore(img, container.childNodes[0]);
+
+      const uploadText = container.querySelector('.Create-Card-img-text');
+      uploadText.style.display = 'none';
+
+      const uploadContainer = container.querySelector('.Create-Card-img-upload-container');
+      uploadContainer.style.display = 'none';
+    }
+  </script>
 </body>
 
 </html>

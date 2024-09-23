@@ -1,65 +1,68 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
 
-.Create-Card-Logo{
+.Create-Card-Logo {
   font-size: 40px;
   font-weight: 800;
   color: #605bff;
   padding-left: 20px;
 }
 
-.Create-Card-Container{
+.Create-Card-Container {
   display: flex;
   justify-content: center;
 }
 
-.Card-Container{
+.Card-Container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 15px;
 }
 
-.Create-Card-heading{
+.Create-Card-heading {
   font-size: 25px;
 }
 
-.Create-Card-text{
-  font-size: 20px
+.Create-Card-text {
+  font-size: 20px;
 }
 
-.Create-Card-div-container{
+.Create-Card-div-container {
   display: flex;
   gap: 40px;
 }
 
-.Create-Card-checkbox-div-Container{
+.Create-Card-checkbox-div-Container {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.Create-Card-radio-Container{
+.Create-Card-radio-Container {
   display: flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
 }
 
-.Create-Card-radio{
+.Create-Card-radio {
   width: 18px;
   height: 18px;
 }
 
-.Create-Card-radio-text{
+.Create-Card-radio-text {
   font-size: 17px;
   color: #333333;
 }
 
-.Create-Card-para{
+.Create-Card-para {
   font-size: 16px;
   font-weight: 500;
 }
@@ -68,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-.Create-Card-img-container{
+.Create-Card-img-container {
   width: 100%;
   height: 200px;
   border: 1px dashed #0a96d4;
@@ -78,40 +81,43 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  position: relative; /* Allows positioning of child elements */
+  cursor: pointer; /* Indicate clickability */
 }
 
-.Create-Card-img-gallery{
-  width: 100px;
-  height: 100px;
+.Create-Card-img-gallery {
+  max-width: 100%; /* Ensure the uploaded image doesn't overflow */
+  max-height: 100%; /* Keep the image within bounds */
+  object-fit: contain; /* Maintain aspect ratio */
 }
 
-.Create-Card-img-upload{
+.Create-Card-img-upload {
   width: 30px;
   height: 30px;
 }
 
-.Create-Card-img-upload-container{
+.Create-Card-img-upload-container {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.Create-Card-img-text{
+.Create-Card-img-text {
   font-size: 15px;
   font-weight: 500;
   color: #6b7280;
 }
 
-.Create-Card-span-text{
+.Create-Card-span-text {
   color: #605bff;
 }
 
-.Create-Card-p{
+.Create-Card-p {
   font-size: 22px;
   font-weight: 600;
 }
 
-.Create-Card-checkbox-Container{
+.Create-Card-checkbox-Container {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -123,12 +129,12 @@ a {
   height: 16px;
 }
 
-.Create-Card-checkbox-text{
+.Create-Card-checkbox-text {
   font-size: 17px;
   font-weight: 500;
 }
 
-.Create-Card-Button{
+.Create-Card-Button {
   width: 130px;
   height: 50px;
   background-color: #605bff;

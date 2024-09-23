@@ -36,6 +36,7 @@ select , input{
   margin-top: 50px;
   padding: 20px;
   border: 1px solid lightgray;
+  background: white;
   border-radius: 10px;
   width: 600px;
 }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Mnanagement</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/sidebar.css">
+  <link rel="stylesheet" href="/src/styles/myCards.css">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span class="toggle-headin-div">
+      <button id="toggle-btn">☰</button>
+      <p class="main-heading">Cards</p>
+    </span>
+    <a href="/src/pages/purchaseCreateCard.html">
+      <button class="add-new-btn">
+        <i class="fa-solid fa-plus" style="margin-right: 5px;"></i> Create New Card</button>
+    </a>
+  </div>
+
+  <div id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-options-main">
+      <div class=" app-logo-div">
+        <img src="/src/assets/Customer-Management-logo.svg" alt="Logo" class="app-logo" />
+      </div>
+      <a href="/src/pages/memberProfile.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="heading">Dashboard</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/customerList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-users"></i>
+          <span class="heading">Members</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/scanList.html">
+        <div class="sidebar-option">
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g class="icon-fill">
+                <path
+                  d="M15 3H21V8H19V5H15V3ZM9 3V5H5V8H3V3H9ZM15 21V19H19V16H21V21H15ZM9 21H3V16H5V19H9V21ZM3 11H21V13H3V11Z" />
+              </g>
+            </svg>
+          </span>
+          <span class="heading">Scan</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/purchaseMoreCardAndSms.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="heading">Purchase</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/myCards.html">
+        <div class="sidebar-option">
+          <i class="fa-regular fa-credit-card"></i>
+          <span class="heading">Cards</span>
+        </div>
+      </a>
+
+      <div class="sidebar-option">
+        <i class="fa-solid fa-gear"></i>
+        <span class="heading">Setting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- start purchase create new card page  -->
+  <div class="main-body">
+    <p class="my-card-dasc">
+      Ready to test? Follow the instructions to publish your stamp card(s) to the
+      app. If you’re not quite ready to launch with customers yet, set the card to
+      private (see advanced card settings).
+    </p>
+  
+    <div class="my-cards-main-container">
+      <div class="my-sigle-card-container">
+        <p class="my-card-headings">Card one</p>
+        <img src="/src/assets/my-card-1.png" alt="card 1" class="my-card-imges">
+        <img src="/src/assets/card-turn-icon-svg.svg" class="card-turn-icon">
+        <div class="ellipsis-container" onmouseleave="hideDropdown(this)" onmouseenter="showDropdown(this)">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li onclick="openModal()"><i class="fa-solid fa-trash"></i> Delete</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="my-sigle-card-container">
+        <p class="my-card-headings">Card two</p>
+        <img src="/src/assets/my-card-2.png" alt="card 2" class="my-card-imges">
+        <img src="/src/assets/card-turn-icon-svg.svg" class="card-turn-icon">
+        <div class="ellipsis-container" onmouseleave="hideDropdown(this)" onmouseenter="showDropdown(this)">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li onclick="openModal()"><i class="fa-solid fa-trash"></i> Delete</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="my-sigle-card-container" style="height: 284px;">
+        <p class="my-card-headings">Card three</p>
+        <div class="my-third-card-img-bg">
+          <img src="/src/assets/my-card-3.png" alt="card 3">
+          <img src="/src/assets/card-turn-icon-svg.svg" class="card-turn-icon">
+          <div class="ellipsis-container" onmouseleave="hideDropdown(this)" onmouseenter="showDropdown(this)">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <div class="dropdown-menu">
+              <ul>
+                <li onclick="openModal()"><i class="fa-solid fa-trash"></i> Delete</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Markup -->
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <!-- <span class="close" onclick="closeModal()">
+          <img src="/src/assets/Cross.svg" height="20px" width="20px">
+        </span> -->
+        <h2 class="cancel-modal-heading">Cancel</h2>
+        <p class="cancel-modal-desc">Are you sure you want to Delete the card</p>
+        <div class="btns">
+        <button class="confirm-btn" onclick="deleteCard()">Yes</button>
+        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="/src/js/my-cards.js"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

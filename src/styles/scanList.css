@@ -1,15 +1,6 @@
 
 /* scan list table  */
 
-@font-face {
-  font-family: my-font;
-  src: url(/src/Nunito-Regular.ttf);
-}
-
-body {
-  font-family: my-font !important;
-}
-
 .table-container {
   max-height: 90vh;
   overflow: auto;

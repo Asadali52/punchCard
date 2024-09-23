@@ -1,11 +1,3 @@
-@font-face {
-  font-family: my-font;
-  src: url(/src/Nunito-Regular.ttf);
-}
-
-body {
-  font-family: my-font !important;
-}
 
 .home-cards-main{
   display: grid;

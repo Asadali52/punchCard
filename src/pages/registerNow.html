@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/registerNow.css">
+  <link rel="stylesheet" href="/src/styles/dialPadModal.css">
   <title>Register Now</title>
   <style>
     body {
@@ -19,10 +20,8 @@
 <body>
   <p class="logo-text">Logo</p>
   <div class="body">
-
     <div class="registerNow-form-contianer">
       <h3 class="register-now-heading">Register Now</h3>
-
       <div class="registernow-two-input-con">
         <div class="register-now-input-con">
           <p>First Name</p>
@@ -33,31 +32,24 @@
           <input type="text" placeholder="John">
         </div>
       </div>
-
       <div class="register-now-input-con">
         <p>Bussiness Name</p>
         <input type="text" placeholder="Bussiness John">
       </div>
-
       <div class="register-now-input-con" style="position: relative;">
         <p>Email</p>
         <input type="email" placeholder="abc@gmail.com" style="padding-left: 40px;">
         <i class="fa-solid fa-envelope"></i>
       </div>
-
-
       <div class="register-now-input-con">
         <p>Phone Number</p>
         <input type="tel" placeholder="(356) 358964 5" />
       </div>
-
-
       <div class="register-now-input-con" style="position: relative;">
         <p>Address</p>
         <input type="email" placeholder="Enter Your Address" style="padding-left: 40px;">
         <i class="fa-solid fa-location-dot"></i>
       </div>
-
       <div class="registernow-three-input-con">
         <div class="register-now-input-con">
           <p>State</p>
@@ -72,13 +64,11 @@
           <input type="text" placeholder="50550">
         </div>
       </div>
-
       <div class="checkbox-container">
         <input id="checkbox" type="checkbox">
         <label for="checkbox" style="margin-top: 5px;">By creating an account, I agree to our Terms of use and Privacy
           Policy</label>
       </div>
-
       <div class="continue-btn-container">
         <a href="/src/pages/EnterPassword.html">
           <p>Continue</p>
@@ -86,12 +76,60 @@
         <span style="font-size: 15px;">Already have an account? <a href="/src/pages/EnterPassword.html">Log
             in</a></span>
       </div>
-
-
     </div>
-
   </div>
 
+    <button id="addNewMemberBtn">Add New Member</button>
+
+    <!-- Add New Member Modal -->
+    <div id="addNewMemberModal" class="modal">
+      <div class="modal-content">
+        <span class="close addNewMemberClose">&times;</span>
+        <h2 class="dialPadHeading">Add New Member</h2>
+
+        <div class="dialPad-input-con">
+          <p>Name</p>
+          <input type="text" placeholder="Tom Sample">
+        </div>
+        <div class="dialPad-input-con">
+          <p>Mobile</p>
+          <input type="tel" placeholder="(281)444-2345">
+        </div>
+        <div class="dialPad-input-con">
+          <p>NFC #</p>
+          <input type="text" placeholder="3c234d5896">
+        </div>
+        <div class="dialPad-input-con">
+          <p>$ Value</p>
+        <input type="text" id="openDialPadInput" class="modal-trigger" placeholder="$ 22.46" readonly>
+      </div>
+      <button class="add-btn addNewMemberClose">Add</button>
+      </div>
+    </div>
+  
+    <!-- Dial Pad Modal -->
+    <div id="dialPadModal" class="modal">
+      <div class="modal-content dial-pad-modal-width">
+        <span class="close" id="dialPadClose">&times;</span>
+        <h2 class="dialPadHeading">Dial Pad</h2>
+        <input type="text" id="dialPadInput" class="dial-pad-input" readonly>
+        <div class="dial-buttons">
+          <button class="dial-btn" data-value="1">1</button>
+          <button class="dial-btn" data-value="2">2</button>
+          <button class="dial-btn" data-value="3">3</button>
+          <button class="dial-btn" data-value="4">4</button>
+          <button class="dial-btn" data-value="5">5</button>
+          <button class="dial-btn" data-value="6">6</button>
+          <button class="dial-btn" data-value="7">7</button>
+          <button class="dial-btn" data-value="8">8</button>
+          <button class="dial-btn" data-value="9">9</button>
+          <button class="dial-btn" data-value=".">.</button>
+        </div>
+        <button id="addDialPadValue" class="add-btn">Add</button>
+      </div>
+    </div>
+
+  <script src="/src/js/dialPadModal.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/registerNow.css">
-  <link rel="stylesheet" href="/src/styles/dialPadModal.css">
   <title>Register Now</title>
   <style>
     body {
@@ -79,57 +78,7 @@
     </div>
   </div>
 
-    <button id="addNewMemberBtn">Add New Member</button>
-
-    <!-- Add New Member Modal -->
-    <div id="addNewMemberModal" class="modal">
-      <div class="modal-content">
-        <span class="close addNewMemberClose">&times;</span>
-        <h2 class="dialPadHeading">Add New Member</h2>
-
-        <div class="dialPad-input-con">
-          <p>Name</p>
-          <input type="text" placeholder="Tom Sample">
-        </div>
-        <div class="dialPad-input-con">
-          <p>Mobile</p>
-          <input type="tel" placeholder="(281)444-2345">
-        </div>
-        <div class="dialPad-input-con">
-          <p>NFC #</p>
-          <input type="text" placeholder="3c234d5896">
-        </div>
-        <div class="dialPad-input-con">
-          <p>$ Value</p>
-        <input type="text" id="openDialPadInput" class="modal-trigger" placeholder="$ 22.46" readonly>
-      </div>
-      <button class="add-btn addNewMemberClose">Add</button>
-      </div>
-    </div>
   
-    <!-- Dial Pad Modal -->
-    <div id="dialPadModal" class="modal">
-      <div class="modal-content dial-pad-modal-width">
-        <span class="close" id="dialPadClose">&times;</span>
-        <h2 class="dialPadHeading">Dial Pad</h2>
-        <input type="text" id="dialPadInput" class="dial-pad-input" readonly>
-        <div class="dial-buttons">
-          <button class="dial-btn" data-value="1">1</button>
-          <button class="dial-btn" data-value="2">2</button>
-          <button class="dial-btn" data-value="3">3</button>
-          <button class="dial-btn" data-value="4">4</button>
-          <button class="dial-btn" data-value="5">5</button>
-          <button class="dial-btn" data-value="6">6</button>
-          <button class="dial-btn" data-value="7">7</button>
-          <button class="dial-btn" data-value="8">8</button>
-          <button class="dial-btn" data-value="9">9</button>
-          <button class="dial-btn" data-value=".">.</button>
-        </div>
-        <button id="addDialPadValue" class="add-btn">Add</button>
-      </div>
-    </div>
-
-  <script src="/src/js/dialPadModal.js"></script>
 </body>
 
 </html>

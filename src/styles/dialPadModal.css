@@ -1,8 +1,8 @@
 /* Modal General Styles */
-.modal {
+.dialPadModalAndAddMemberModal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -11,7 +11,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+.dialPadModalAndAddMemberModalContent {
   background-color: #fefefe;
   position: relative;
   top: 50%;
@@ -22,6 +22,10 @@
   width: 80%;
   max-width: 350px;
   border-radius: 8px;
+}
+
+input:focus {
+  outline: 0;
 }
 
 .dialPadHeading {
@@ -50,16 +54,6 @@
   cursor: pointer;
 }
 
-/* .modal-trigger {
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  margin-top: 10px;
-  box-sizing: border-box;
-} */
-
 .modal-trigger:focus {
   outline: none;
   border-color: #007bff;
@@ -85,7 +79,6 @@
   border: 2px solid #e1e1e2;
 }
 
-/* Dial Pad Styles */
 .dial-pad-input {
   padding: 10px;
   width: 100%;

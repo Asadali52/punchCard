@@ -1,46 +1,78 @@
-const addNewMemberBtn = document.getElementById('addNewMemberBtn');
-const addNewMemberModal = document.getElementById('addNewMemberModal');
-const addNewMemberClose = document.querySelectorAll('.addNewMemberClose');
 
-const openDialPadInput = document.getElementById('openDialPadInput');
-const dialPadModal = document.getElementById('dialPadModal');
-const dialPadClose = document.getElementById('dialPadClose');
-const dialPadInput = document.getElementById('dialPadInput');
-const addDialPadValue = document.getElementById('addDialPadValue');
+const addNewMemberModalTemplate = document.querySelector('.addNewMemberModalTemplate');
+const dialPadModalTemplate = document.querySelector('.dialPadModalTemplate');
 
-addNewMemberBtn.onclick = function() {
-  addNewMemberModal.style.display = 'block';
+
+function createModalInstance(template) {
+  const modal = template.cloneNode(true);
+  modal.style.display = 'block';
+  document.body.appendChild(modal);
+  return modal;
 }
 
-addNewMemberClose.onclick = function() {
-  addNewMemberModal.style.display = 'none';
+function initializeAddNewMemberModal(modal) {
+  const addNewMemberCloseBtns = modal.querySelectorAll('.addNewMemberClose');
+  const openDialPadInput = modal.querySelector('.openDialPadInput');
+
+  addNewMemberCloseBtns.forEach(btn => {
+    btn.onclick = () => modal.style.display = 'none';
+  });
+
+  openDialPadInput.onclick = () => {
+    const dialPadModal = createModalInstance(dialPadModalTemplate);
+    initializeDialPadModal(dialPadModal, openDialPadInput, modal);
+  };
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal && !modal.classList.contains('child-open')) {
+      modal.style.display = 'none';
+    }
+  });
 }
 
-openDialPadInput.onclick = function() {
-  dialPadModal.style.display = 'block';
-}
+function initializeDialPadModal(dialPadModal, openDialPadInput, parentModal) {
+  const dialPadClose = dialPadModal.querySelector('.dialPadClose');
+  const dialPadInput = dialPadModal.querySelector('.dialPadInput');
+  const addDialPadValue = dialPadModal.querySelector('.addDialPadValue');
 
-dialPadClose.onclick = function() {
-  dialPadModal.style.display = 'none';
-}
-
-window.onclick = function(event) {
-  if (event.target == addNewMemberModal) {
-    addNewMemberModal.style.display = 'none';
-  } else if (event.target == dialPadModal) {
+  dialPadClose.onclick = () => {
     dialPadModal.style.display = 'none';
-  }
+    enableParentModalClose(parentModal);
+  };
+
+  const dialPadButtons = dialPadModal.querySelectorAll('.dial-btn');
+  dialPadButtons.forEach(button => {
+    button.onclick = () => dialPadInput.value += button.getAttribute('data-value');
+  });
+
+  addDialPadValue.onclick = () => {
+    openDialPadInput.value = dialPadInput.value;
+    dialPadModal.style.display = 'none';
+    dialPadInput.value = ''; 
+    enableParentModalClose(parentModal);
+  };
+
+  window.addEventListener('click', function(event) {
+    if (event.target === dialPadModal) {
+      dialPadModal.style.display = 'none';
+      enableParentModalClose(parentModal);
+    }
+  });
+
+  disableParentModalClose(parentModal);
 }
 
-const dialPadButtons = document.querySelectorAll('.dial-btn');
-dialPadButtons.forEach(button => {
-  button.onclick = function() {
-    dialPadInput.value += button.getAttribute('data-value');
-  }
+function disableParentModalClose(parentModal) {
+  parentModal.classList.add('child-open');
+}
+
+function enableParentModalClose(parentModal) {
+  parentModal.classList.remove('child-open');
+}
+
+document.querySelectorAll('.openAddNewMemberModalBtn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const addNewMemberModal = createModalInstance(addNewMemberModalTemplate);
+    initializeAddNewMemberModal(addNewMemberModal);
+  });
 });
-
-addDialPadValue.onclick = function() {
-  openDialPadInput.value = dialPadInput.value;
-  dialPadModal.style.display = 'none';
-  dialPadInput.value = '';
-}

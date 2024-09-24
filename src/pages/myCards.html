@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/sidebar.css">
   <link rel="stylesheet" href="/src/styles/myCards.css">
+  <link rel="stylesheet" href="/src/styles/dialPadModal.css">
   <style>
     body {
       font-family: 'Nunito', sans-serif;
@@ -94,6 +95,11 @@
         </div>
       </a>
 
+      <div class="sidebar-option openAddNewMemberModalBtn">
+        <i class="fa-solid fa-diamond"></i>
+        <span class="heading">Add Action</span>
+      </div>
+
       <div class="sidebar-option">
         <i class="fa-solid fa-gear"></i>
         <span class="heading">Setting</span>
@@ -108,7 +114,7 @@
       app. If you’re not quite ready to launch with customers yet, set the card to
       private (see advanced card settings).
     </p>
-  
+
     <div class="my-cards-main-container">
       <div class="my-sigle-card-container">
         <p class="my-card-headings">Card one</p>
@@ -123,7 +129,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="my-sigle-card-container">
         <p class="my-card-headings">Card two</p>
         <img src="/src/assets/my-card-2.png" alt="card 2" class="my-card-imges">
@@ -137,7 +143,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="my-sigle-card-container" style="height: 284px;">
         <p class="my-card-headings">Card three</p>
         <div class="my-third-card-img-bg">
@@ -156,23 +162,70 @@
     </div>
   </div>
 
-    <!-- Modal Markup -->
-    <div id="deleteModal" class="modal">
-      <div class="modal-content">
-        <!-- <span class="close" onclick="closeModal()">
+  <!-- Modal Markup -->
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <!-- <span class="close" onclick="closeModal()">
           <img src="/src/assets/Cross.svg" height="20px" width="20px">
         </span> -->
-        <h2 class="cancel-modal-heading">Cancel</h2>
-        <p class="cancel-modal-desc">Are you sure you want to Delete the card</p>
-        <div class="btns">
+      <h2 class="cancel-modal-heading">Cancel</h2>
+      <p class="cancel-modal-desc">Are you sure you want to Delete the card</p>
+      <div class="btns">
         <button class="confirm-btn" onclick="deleteCard()">Yes</button>
         <button class="cancel-btn" onclick="closeModal()">Cancel</button>
       </div>
-      </div>
     </div>
   </div>
-  
+  </div>
 
+  <!-- Add New Member Modal Template -->
+  <div class="addNewMemberModalTemplate dialPadModalAndAddMemberModal" style="display:none">
+    <div class="dialPadModalAndAddMemberModalContent">
+      <span class="close addNewMemberClose">&times;</span>
+      <h2 class="dialPadHeading">Add New Member</h2>
+      <div class="dialPad-input-con">
+        <p>Name</p>
+        <input type="text" placeholder="Tom Sample">
+      </div>
+      <div class="dialPad-input-con">
+        <p>Mobile</p>
+        <input type="tel" placeholder="(281)444-2345">
+      </div>
+      <div class="dialPad-input-con">
+        <p>NFC #</p>
+        <input type="text" placeholder="3c234d5896">
+      </div>
+      <div class="dialPad-input-con">
+        <p>$ Value</p>
+        <input type="text" class="modal-trigger openDialPadInput" placeholder="$ 22.46" readonly>
+      </div>
+      <button class="add-btn addNewMemberClose">Add</button>
+    </div>
+  </div>
+
+  <!-- Dial Pad Modal Template -->
+  <div class="dialPadModalTemplate dialPadModalAndAddMemberModal" style="display:none">
+    <div class="dialPadModalAndAddMemberModalContent dial-pad-modal-width">
+      <span class="close dialPadClose">&times;</span>
+      <h2 class="dialPadHeading">Dial Pad</h2>
+      <input type="text" class="dial-pad-input dialPadInput" readonly>
+      <div class="dial-buttons">
+        <button class="dial-btn" data-value="1">1</button>
+        <button class="dial-btn" data-value="2">2</button>
+        <button class="dial-btn" data-value="3">3</button>
+        <button class="dial-btn" data-value="4">4</button>
+        <button class="dial-btn" data-value="5">5</button>
+        <button class="dial-btn" data-value="6">6</button>
+        <button class="dial-btn" data-value="7">7</button>
+        <button class="dial-btn" data-value="8">8</button>
+        <button class="dial-btn" data-value="9">9</button>
+        <button class="dial-btn" data-value=".">.</button>
+      </div>
+      <button class="add-btn addDialPadValue">Add</button>
+    </div>
+  </div>
+
+  <script src="/src/js/dialPadModal.js"></script>
   <script src="/src/js/my-cards.js"></script>
   <script src="/src/js/script.js"></script>
 </body>

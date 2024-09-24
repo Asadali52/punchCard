@@ -7,9 +7,10 @@
   <title>Customer Mnanagement</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
-  rel="stylesheet">
+    rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/sidebar.css">
   <link rel="stylesheet" href="/src//styles/addNewMember.css">
+  <link rel="stylesheet" href="/src/styles/dialPadModal.css">
   <style>
     body {
       font-family: 'Nunito', sans-serif;
@@ -38,31 +39,31 @@
           <i class="fa-solid fa-qrcode"></i>
           <span class="heading">Dashboard</span>
         </div>
-        </a>
-  
-        <a href="/src/pages/customerList.html">
+      </a>
+
+      <a href="/src/pages/customerList.html">
         <div class="sidebar-option">
           <i class="fa-solid fa-users"></i>
           <span class="heading">Members</span>
         </div>
-        </a>
+      </a>
 
-        <a href="/src/pages/businessNameList.html">
-          <div class="sidebar-option">
-            <i class="fa-solid fa-business-time"></i>
-            <span class="heading">Business</span>
-          </div>
-        </a>
-  
-  
-        <a href="/src/pages/addNewMember.html">
-          <div class="sidebar-option">
-            <i class="fa-solid fa-plus"></i>
-            <span class="heading" style="font-size: 15px; white-space: nowrap;">Add New Members</span>
-          </div>
-        </a>
+      <a href="/src/pages/businessNameList.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-business-time"></i>
+          <span class="heading">Business</span>
+        </div>
+      </a>
 
-        <a href="/src/pages/scanList.html">
+
+      <a href="/src/pages/addNewMember.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-plus"></i>
+          <span class="heading" style="font-size: 15px; white-space: nowrap;">Add New Members</span>
+        </div>
+      </a>
+
+      <a href="/src/pages/scanList.html">
         <div class="sidebar-option">
           <span class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -74,21 +75,26 @@
           </span>
           <span class="heading">Scan</span>
         </div>
-        </a>
+      </a>
 
-        <a href="/src/pages/purchaseMoreCardAndSms.html">
-          <div class="sidebar-option">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="heading">Purchase</span>
-          </div>
-        </a>
+      <a href="/src/pages/purchaseMoreCardAndSms.html">
+        <div class="sidebar-option">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="heading">Purchase</span>
+        </div>
+      </a>
 
-        <a href="/src/pages/myCards.html">
-          <div class="sidebar-option">
-            <i class="fa-regular fa-credit-card"></i>
-            <span class="heading">Cards</span>
-          </div>
-        </a>
+      <a href="/src/pages/myCards.html">
+        <div class="sidebar-option">
+          <i class="fa-regular fa-credit-card"></i>
+          <span class="heading">Cards</span>
+        </div>
+      </a>
+
+      <div class="sidebar-option openAddNewMemberModalBtn">
+        <i class="fa-solid fa-diamond"></i>
+        <span class="heading">Add Action</span>
+      </div>
 
       <div class="sidebar-option">
         <i class="fa-solid fa-gear"></i>
@@ -177,15 +183,65 @@
 
     <div id="otpSuccessModal" class="modal">
       <div class="modal-content">
-          <span class="close" id="closeSuccessModal">&times;</span>
-          <div class="success-otp-img-div">
+        <span class="close" id="closeSuccessModal">&times;</span>
+        <div class="success-otp-img-div">
           <img src="/src/assets/Successmark.svg" height="70px" width="70px">
-          </div>
-          <p class="otp-verified-text">OTP Verified Successfully</p>
-          <p class="otp-success-des">Your Card has been generated successfully.</p>
-          <p class="go-to-profile-btn">Go to Profile</p>
+        </div>
+        <p class="otp-verified-text">OTP Verified Successfully</p>
+        <p class="otp-success-des">Your Card has been generated successfully.</p>
+        <p class="go-to-profile-btn">Go to Profile</p>
       </div>
-  </div>
+    </div>
+
+    <!-- Add New Member Modal Template -->
+    <div class="addNewMemberModalTemplate dialPadModalAndAddMemberModal" style="display:none">
+      <div class="dialPadModalAndAddMemberModalContent">
+        <span class="close addNewMemberClose">&times;</span>
+        <h2 class="dialPadHeading">Add New Member</h2>
+        <div class="dialPad-input-con">
+          <p>Name</p>
+          <input type="text" placeholder="Tom Sample">
+        </div>
+        <div class="dialPad-input-con">
+          <p>Mobile</p>
+          <input type="tel" placeholder="(281)444-2345">
+        </div>
+        <div class="dialPad-input-con">
+          <p>NFC #</p>
+          <input type="text" placeholder="3c234d5896">
+        </div>
+        <div class="dialPad-input-con">
+          <p>$ Value</p>
+          <input type="text" class="modal-trigger openDialPadInput" placeholder="$ 22.46" readonly>
+        </div>
+        <button class="add-btn addNewMemberClose">Add</button>
+      </div>
+    </div>
+
+    <!-- Dial Pad Modal Template -->
+    <div class="dialPadModalTemplate dialPadModalAndAddMemberModal" style="display:none">
+      <div class="dialPadModalAndAddMemberModalContent dial-pad-modal-width">
+        <span class="close dialPadClose">&times;</span>
+        <h2 class="dialPadHeading">Dial Pad</h2>
+        <input type="text" class="dial-pad-input dialPadInput" readonly>
+        <div class="dial-buttons">
+          <button class="dial-btn" data-value="1">1</button>
+          <button class="dial-btn" data-value="2">2</button>
+          <button class="dial-btn" data-value="3">3</button>
+          <button class="dial-btn" data-value="4">4</button>
+          <button class="dial-btn" data-value="5">5</button>
+          <button class="dial-btn" data-value="6">6</button>
+          <button class="dial-btn" data-value="7">7</button>
+          <button class="dial-btn" data-value="8">8</button>
+          <button class="dial-btn" data-value="9">9</button>
+          <button class="dial-btn" data-value=".">.</button>
+        </div>
+        <button class="add-btn addDialPadValue">Add</button>
+      </div>
+    </div>
+
+
+    <script src="/src/js/dialPadModal.js"></script>
 
     <script src="/src/js/otpVerificationModal.js"></script>
     <script src="/src/js/script.js"></script>

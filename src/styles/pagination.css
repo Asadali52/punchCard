@@ -1,4 +1,3 @@
-
 .pag-container{
   display: flex;
   justify-content: flex-end;
@@ -88,18 +87,34 @@ color: #605BFF;
 }
 
 @media only screen and (max-width: 600px) {
+  .previous-btn {
+    font-size: 11px;
+  }
+
+  .next-btn {
+    font-size: 11px;
+  }
+
+  .previous-arrow {
+    font-size: 15px;
+  }
+
+  .next-arrow {
+    font-size: 15px;
+  }
+
   .pagination-main{
     gap: 5px;
     background-color: white;
-    padding-left: 7PX;
-    padding-right: 7px;
+    padding-left: 5PX;
+    padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
   .page-num-container p {
     height: 30px;
-    font-size: 13px;
+    font-size: 11px;
     width: 30px;
   }
 

@@ -1,0 +1,99 @@
+section {
+  padding-top: 30px;
+  padding-left: 80px;
+}
+
+.top-heading div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333333;
+}
+
+.top-heading h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.top-heading p {
+  color: #666666CC;
+  font-size: 15px;
+  width: 40%;
+  line-height: 25px;
+}
+
+.avatar-div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.main-data-div {
+  border-bottom: 1px solid lightgray;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-data-div h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main-data-each-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-data-div p {
+  font-size: 15px;
+  color: black;
+  opacity: .5;
+}
+
+.checkbox-big-con {
+  margin-top: 20px;
+}
+
+.checkbox-big-con label{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.checkbox-small-des {
+  color: #333333B2;
+  font-size: 14px;
+  padding-left: 20px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 800px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20;
+    padding-top: 20px;
+  }
+
+  .top-heading p {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .main-data-div h4 {
+    font-size: 15px;
+  }
+  .main-data-div p {
+    font-size: 13px;
+  }
+  .main-data-each-container {
+    margin-top: 10px;
+  }
+  .main-data-div {
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

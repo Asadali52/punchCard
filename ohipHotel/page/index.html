@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/ohipHotel/style/nav.css">
+  <link rel="stylesheet" href="/ohipHotel/style/main.css">
+  <link rel="stylesheet" href="/ohipHotel/style/modal.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <span class="circle-logo"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Web designs</a></li>
+        <li><a href="#">Mobile designs</a></li>
+        <li><a href="#">Illustrations</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search nav-search-larger" style="position: relative;">
+        <img src="/ohipHotel/images/search-icon.svg" alt="icon">
+        <input type="search" placeholder="search">
+      </div>
+      <select class="language-select">
+        <option value="English">English (United States)</option>
+        <option value="French">French</option>
+      </select>
+      <button class="button" id="openLoginModal">Log in</button>
+      <button class="button">Sign up</button>
+      <button class="toggle-button" id="toggle-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <button class="close-btn" id="close-btn">✖</button>
+    <ul class="sidebar-links">
+      <li>
+        <select class="language-select language-select-small">
+          <option value="English">English (United States)</option>
+          <option value="French">French</option>
+        </select>
+      </li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Web designs</a></li>
+      <li><a href="#">Mobile designs</a></li>
+      <li><a href="#">Illustrations</a></li>
+
+    </ul>
+  </aside>
+
+  <div class="nav-search nav-search-small" style="position: relative;">
+    <img src="/ohipHotel/images/search-icon.svg" alt="icon">
+    <input type="search" placeholder="search">
+  </div>
+
+
+  <!-- main conrent  -->
+  <section>
+    <div class="top-heading">
+      <div>
+        <img src="/ohipHotel/images/Successmark (1).svg" alt="Mark">
+        <h4>Booking Confirmation</h4>
+      </div>
+      <p>W are please to inform you that your reservation request has been received and confirmed. Thank You!</p>
+    </div>
+    <div class="avatar-div">
+      <img src="/ohipHotel/images/avatar.svg" alt="">
+      <h3>John Doe</h3>
+    </div>
+    <div class="main-data-each-container">
+      <div class="main-data-div">
+        <h4>Room Type</h4>
+        <p>Deluxe</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Date Of Stay</h4>
+        <p>02/18/2023 To 02/17/2024</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Adults/child</h4>
+        <p>2</p>
+      </div>
+    </div>
+    <div class="main-data-each-container">
+      <div class="main-data-div">
+        <h4>Reservation No</h4>
+        <p>2345645678</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Amount</h4>
+        <p>$673</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Status</h4>
+        <p>Blocked</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Booking Code</h4>
+        <p>6445254</p>
+      </div>
+    </div>
+    <div class="main-data-each-container">
+      <div class="main-data-div">
+        <h4>Loyalty No.</h4>
+        <p>2345645678</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Mobile Number</h4>
+        <p>+91 (234) 87809 348</p>
+      </div>
+      <div class="main-data-div">
+        <h4>Address</h4>
+        <p>123 ST. Edwards, CO 81632</p>
+      </div>
+    </div>
+    <div class="checkbox-big-con">
+      <div class="checkbox-div">
+        <input id="123" type="checkbox" style="height: 14px; width: 14px;">
+        <label for="123">Send Confirmation to my phone</label>
+      </div>
+      <div style="display: flex; gap: 20px;">
+        <p class="checkbox-small-des">Yes, send my reservation confirmation to my mobile device via text message</p>
+        <img src="/ohipHotel/images/mob.svg" alt="" >
+      </div>
+    </div>
+  </section>
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLoginModal">&times;</span>
+      <div class="modal-input-div">
+        <p>Your Name</p>
+        <input type="text" placeholder="john doe">
+      </div>
+      <div class="modal-input-div" style="margin-top: 20px;">
+        <p>Phone Number</p>
+        <input type="text" placeholder="+1 (43) 7834 34898">
+      </div>
+      <input type="checkbox" id="login" style="margin-top: 20px;">
+      <label for="login" class="login-mod-des-check">Yes, I would like to personalize my experience at this
+        hotel</label>
+      <p class="login-mod-btn" id="loginButton">Text Me Link</p>
+    </div>
+  </div>
+  <!-- Login Success Modal -->
+  <div id="loginSuccessModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLoginSuccessModal"></span>
+      <!-- <span class="close" id="closeLoginSuccessModal">&times;</span> -->
+      <div class="success-modal-content-con">
+        <img class="link-success-icon" src="/ohipHotel/images/link-success-icon.svg" alt="">
+        <h2>Link Send Successfully</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/ohipHotel/javaScript/modal.js"></script>
+  <script src="/ohipHotel/javaScript/script.js"></script>
+</body>
+
+</html>

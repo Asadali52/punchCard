@@ -1,0 +1,134 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FAFAFB;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-div {
+  width: 400px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+.screen-heading {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* profile picker  */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #ccc;
+}
+
+.image-preview img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.john-doe-text {
+margin: 0;
+font-size: 20px;
+font-weight: 700;
+}
+
+.edit-icon-container {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  height: 25px;
+  width: 25px;
+  background: lightgray;
+  border-radius: 50%;
+  border: 4px solid white;
+  bottom: -7px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-icon-container img {
+ height: 70% !important;
+ width: 70% !important;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* input styling  */
+.select-container,
+.input-container {
+  margin-top: 20px;
+}
+
+.select-container p,
+.input-container p {
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  color: #030229;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.select-container select,
+.input-container input {
+  height: 42px;
+  background-color: #FAFAFB;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: gray;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid lightgray;
+}
+
+.select-container select:focus,
+.input-container input:focus {
+  outline: none;
+}
+
+/* btn  */
+
+.createProfile-btn {
+  background-color: #2F2B43;
+  color: white;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}

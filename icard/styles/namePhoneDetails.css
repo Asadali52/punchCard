@@ -1,0 +1,109 @@
+*  {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FAFAFB;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-div {
+  width: 400px;
+  height: 90vh;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen-heading {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.select-container,
+.input-container {
+  margin-top: 20px;
+}
+
+.select-container p,
+.input-container p {
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  color: #030229;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.select-container select,
+.input-container input {
+  height: 42px;
+  background-color: #FAFAFB;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: gray;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid lightgray;
+}
+
+.select-container select:focus,
+.input-container input:focus {
+  outline: none;
+}
+
+/* btn  */
+
+.createProfile-btn {
+  background-color: #2F2B43;
+  color: white;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* checkbox styling  */
+.checkbox-container {
+  display: flex;
+  gap: 5px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.checkbox-container p {
+  margin: 0;
+  color: #333333;
+}
+
+.checkbox-container p a {
+  color: #333333;
+}
+
+.checkbox-container p a:hover {
+  text-decoration: none;
+}
+
+.checkbox-container input {
+  height: 20px;
+  width: 20px;
+}

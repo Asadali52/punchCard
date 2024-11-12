@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FAFAFB;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.main-div {
+  width: 400px;
+  background: #F3F4F6;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+.white-div-for-each {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.img-div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.img-div img {
+  height: 100%;
+  width: 100%;
+}
+
+/* phone btn div  */
+
+.three-btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.phone-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background: #F3F4F6;
+  gap: 6px;
+  color: #1B1B1B99;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.phone-btn-div p,
+.phone-btn-div img {
+  margin: 0;
+}
+
+.single-icon-div {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #F3F4F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-icon-div img {
+  height: 65%;
+  width: 65%;
+}
+
+.single-icon-and-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.number-company-position-nfc-text {
+  color: #1B1B1B99;
+}
+
+.white-div-internal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.black-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #2F2B43;
+  margin-top: 20px;
+  color: white;
+}

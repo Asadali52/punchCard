@@ -1,3 +1,7 @@
+*  {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -6,8 +10,14 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: #FAFAFB;
   padding-top: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: flex;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .main-div {

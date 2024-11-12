@@ -9,9 +9,15 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: #FAFAFB;
   height: 100vh;
+  padding-left: 8px;
+  padding-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .main-div {
@@ -97,6 +103,7 @@ body {
 
 .checkbox-container p a {
   color: #333333;
+  text-decoration: underline;
 }
 
 .checkbox-container p a:hover {

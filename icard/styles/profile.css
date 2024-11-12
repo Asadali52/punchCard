@@ -11,6 +11,8 @@ body {
   background-color: #FAFAFB;
   display: flex;
   margin-top: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
   justify-content: center;
 }
 
@@ -20,6 +22,10 @@ body {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+a {
+  text-decoration: none;
 }
 
 .white-div-for-each {
@@ -110,4 +116,11 @@ body {
   background-color: #2F2B43;
   margin-top: 20px;
   color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 430px) {
+  .three-btn-container {
+    grid-template-columns: 1fr;
+  }
 }
